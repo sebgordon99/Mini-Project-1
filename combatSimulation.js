@@ -157,14 +157,10 @@ const inputBox = document.getElementById("taskInput")
 
 function retrieveChar() {
     console.log(inputBox.value)
-        // take the output of the search bar
-         // edit the api link with the name appended
+
     fetch('https://api.disneyapi.dev/character' + '?name=' + inputBox.value, options)
   .then(response => response.json())
   .then(response => {
-
-    //print the image and name of that character
-    //if no name exists return error message
 
 
         const searchBarOutput = document.getElementById("searchBarOutput");
@@ -214,13 +210,11 @@ fetch('http://localhost:3000/units', options)
   })
   .catch(err => console.error(err));
 
-// Elements
 const defenderSearch = document.getElementById("defenderSearch");
 const searchDefenderBtn = document.getElementById("searchDefenderBtn");
 const defenderResults = document.getElementById("defenderResults");
 const defenderImage = document.getElementById("defenderImage");
 
-// Stat inputs
 const toughnessInput = document.getElementById("toughness");
 const woundsInput = document.getElementById("wounds");
 const armorSaveSelect = document.getElementById("armorSave");
@@ -231,7 +225,6 @@ defenderSearch.addEventListener("keydown", e => {
   if (e.key === "Enter") searchDefender();
 });
 
-// Search and display matching units
 function searchDefender() {
   const query = defenderSearch.value.trim().toLowerCase();
   defenderResults.innerHTML = "";
@@ -267,7 +260,7 @@ function searchDefender() {
     card.appendChild(img);
     card.appendChild(name);
 
-    // When a unit is clicked, set the image and auto-fill stats
+    // When a unit is clicked, set the image and fill stats
     card.addEventListener("click", () => selectDefendingUnit(unit));
 
     defenderResults.appendChild(card);
@@ -302,7 +295,7 @@ function selectDefendingUnit(unit) {
     invulnSaveSelect.value = "none";
   }
 
-  // Feedback in console
+
   console.log(`Selected ${unit.name}`);
   console.table(unit);
 }
