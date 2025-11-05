@@ -143,44 +143,6 @@ imgToughness.addEventListener("change", function (event) {
 
 
 
-// const options = {method: 'GET', headers: {'User-Agent': 'insomnia/11.6.2'}};
-
-// fetch('https://api.disneyapi.dev/character', options)
-//   .then(response => response.json())
-//   .then(response => {
-//     // console.log(response.data);
-
-//     for (const charImg of response.data){
-//         // console.log(charImg.imageUrl);
-
-//         // const disneyChars = document.createElement("li");
-//         // disneyChars.textContent = charImg.imageUrl
-
-//         const imgLocation = document.getElementById("disneyTest");
-
-//         // imgLocation.appendChild(disneyChars);
-
-//         const disneyImg = document.createElement("img");
-//         // disneyImg.textContent = "src=" + charImg.imageUrl + " alt='placeholder'"
-//         disneyImg.src = charImg.imageUrl
-//         disneyImg.alt = charImg.name
-
-//         const disneyImgName = document.createElement("div");
-//         disneyImgName.textContent = charImg.name
-
-//         imgLocation.appendChild(disneyImg);
-//         imgLocation.appendChild(disneyImgName);
-
-
-
-
-//         //instead, create an img element with the url text in the link section
-//         //maybe in future add the name to the alt text
-//     }
-
-// })
-
-//   .catch(err => console.error(err));
 
 
 addTaskBtn.addEventListener("click", retrieveChar);
